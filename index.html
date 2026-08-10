@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brundavanam P. | Ph.D. Research Scholar — Contemporary Korean Literature &amp; Digital Storytelling</title>
+  
+  <meta name="description" content="Brundavanam P., Ph.D. Research Scholar in the Department of English at Vel Tech, researching Transmedia Storytelling, Korean Webtoons and Narrative Ethics. Poet, author of Whispers Between.">
+  <meta property="og:title" content="Brundavanam P. — Ph.D. Research Scholar">
+  <meta property="og:description" content="Exploring stories that heal, inspire and connect. Research on Korean Webtoons, Narrative Ethics and Transmedia Storytelling.">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="assets/whispers_between.png">
+  
+  <!-- Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Brundavanam P.",
+    "jobTitle": "Ph.D. Research Scholar",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology"
+    },
+    "worksFor": { 
+      "@type": "Organization", 
+      "name": "Department of English" 
+    },
+    "knowsAbout": [
+      "Contemporary Korean Literature",
+      "Digital Storytelling",
+      "Webtoons",
+      "Narrative Ethics",
+      "Transmedia Storytelling"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/brundavanam-p-88722b389/",
+      "https://scholar.google.com/citations?user=WHv56DEAAAAJ&hl=en",
+      "https://www.researchgate.net/profile/Brundavanam-p?ev=hdr_xprf",
+      "https://orcid.org/0009-0006-0148-3536",
+      "https://independent.academia.edu/BrundavanamBose"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=3">
+  
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Floating Glassmorphism Orbs Background -->
+  <div class="orb-container" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+  </div>
+
+  <!-- Custom Scroll Progress Indicator -->
+  <div id="progress-bar" aria-hidden="true"></div>
+
+  <!-- Noise Overlay for Magazine Texture -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Sticky Navbar -->
+  <header id="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#hero">Brundavanam <span>P.</span></a>
+      <nav class="links" aria-label="Main Navigation">
+        <a href="#hero">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#research">Research</a>
+        <a href="#works">My Works</a>
+        <a href="#poetry">Creative</a>
+        <a href="#conferences">Conferences</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-extras">
+        <!-- Search Trigger -->
+        <button class="icon-btn" id="search-toggle" aria-label="Search site" title="Search site">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </button>
+        <!-- Dark Mode Toggle -->
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <svg class="icon sun-icon" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.01a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>
+          <svg class="icon moon-icon" viewBox="0 0 24 24" style="display:none;"><path d="M12.3 22h-.1c-5.5 0-10-4.5-10-10C2.2 6.8 6.4 2.4 11.8 2c.4 0 .8.2 1 .6.2.4.1.8-.2 1.1-2.9 2.5-2.7 7.2.5 9.5 2.1 1.5 4.8 1.5 6.9.1.3-.2.8-.2 1.1 0 .3.3.5.7.4 1.1-1.1 4.5-5.1 7.7-9.5 7.7zm-2-18c-4.1 1.1-7.1 4.8-7.1 9.3 0 5 4 9 9 9 3.8 0 7.2-2.4 8.5-5.9-3.2 1-6.8-.2-8.7-2.9-2.2-3.1-2.2-7.4-.3-9.5z"/></svg>
+        </button>
+        <!-- Download CV Button -->
+        <a class="btn btn-outline nav-cv-btn" href="#contact" id="cv-btn">Download CV</a>
+        <!-- Hamburger Menu for Mobile -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay Menu -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <nav class="mobile-links" aria-label="Mobile Navigation">
+      <a href="#hero">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#research">Research</a>
+      <a href="#works">My Works</a>
+      <a href="#poetry">Creative Writing</a>
+      <a href="#conferences">Conferences</a>
+      <a href="#contact">Contact &amp; CV</a>
+    </nav>
+  </div>
+
+  <!-- Search Overlay Modal -->
+  <div class="search-overlay" id="search-overlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="search-box">
+      <button class="search-close" id="search-close" aria-label="Close search">&times;</button>
+      <input type="text" id="search-input" placeholder="Type to search research, publications, books..." aria-label="Search field">
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="eyebrow reveal">Department of English · Vel Tech</div>
+        <h1 class="reveal">Brundavanam P.</h1>
+        <div class="hero-title-rule reveal"></div>
+        <div class="hero-role reveal">Ph.D. Research Scholar</div>
+        <p class="hero-dept reveal">Vel Tech Rangarajan Dr. Sagunthala R&amp;D Institute of Science and Technology</p>
+        <blockquote class="hero-quote reveal">
+          "Exploring stories that heal, inspire and connect."
+        </blockquote>
+        <div class="hero-btns reveal">
+          <a href="#research" class="btn btn-primary">Explore My Research</a>
+          <a href="#poetry" class="btn btn-outline">Read My Poetry</a>
+          <a href="#contact" class="btn btn-gold">Download CV</a>
+        </div>
+        <div class="stats-row reveal">
+          <div class="stat">
+            <div class="num" data-count="6">0</div>
+            <div class="label">Publications</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-count="2">0</div>
+            <div class="label">Conferences</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-count="2">0</div>
+            <div class="label">Book Chapters</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-count="1">0</div>
+            <div class="label">Patents</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-count="3">0</div>
+            <div class="label">Years of Research</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right reveal">
+        <div class="portrait-frame">
+          <div class="inner">
+            <img src="assets/portrait.png" alt="Brundavanam P." class="portrait-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portrait-fallback" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(135deg, var(--sage) 0%, var(--burgundy) 130%);">B.P.</div>
+          </div>
+          <!-- Floating Literary & Narrative Decorative Elements -->
+          <div class="float-el f1" aria-hidden="true">&#10078;</div>
+          <div class="float-el f2" aria-hidden="true">HALLYU · WEBTOON</div>
+          <div class="float-el f3" aria-hidden="true"></div>
+          <div class="float-el f4" aria-hidden="true">Est. Research 2022</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT ME SECTION -->
+  <section id="about" class="about-section">
+    <div class="container about-grid">
+      <div>
+        <div class="eyebrow reveal">Who I Am</div>
+        <h2 class="section-title reveal">About Me</h2>
+      </div>
+      <div class="about-text">
+        <p class="reveal">I am a Ph.D. Research Scholar in the Department of English specializing in Contemporary Korean Literature, Digital Storytelling, and Webtoons.</p>
+        <p class="reveal">My research explores the intersection of traditional narrative ethics and Hallyu Pop aesthetics in Korean Webtoons using Transmedia Storytelling Theory.</p>
+        <p class="reveal">Through my academic journey, I aim to understand how literature evolves across digital platforms while preserving cultural identity, ethics, and meaningful storytelling.</p>
+        <p class="reveal">I strongly believe that stories have the power to heal, inspire, educate, and connect people beyond geographical and cultural boundaries.</p>
+        <button class="btn btn-primary reveal" id="read-more-btn">Read More Detail</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT DETAIL MODAL -->
+  <div class="modal-overlay" id="about-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close details modal">&times;</button>
+      
+      <div class="modal-content-scroll">
+        <!-- Introduction & Creative Profile -->
+        <div class="modal-section">
+          <div class="eyebrow">Creative &amp; Academic Profile</div>
+          <h3>Story, Novel, and Poem Writer</h3>
+          <p style="margin-bottom: 1.5em; opacity: 0.9;">
+            In addition to my doctoral research, I am actively engaged as a creative writer, penning stories, novels, and collections of poetry. My works explore the subtle thresholds of human connections, silent emotional healing, and narrative resilience.
+          </p>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="modal-section" style="margin-top:2.5em;">
+          <div class="eyebrow">Work Experience</div>
+          <h3>Professional Appointments</h3>
+          <div class="timeline" style="margin: 1.5em 0 0.5em;">
+            <div class="t-item" style="padding-bottom: 1em;">
+              <h4>1.5 Years In Chellamal Women's College</h4>
+              <p>Served as English Faculty handling core literary coursework, conducting language coaching seminars, and mentoring students in university activities.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teaching Experience -->
+        <div class="modal-section" style="margin-top:3em;">
+          <div class="eyebrow">Teaching Expertise</div>
+          <h3>Faculty at Chellammal College</h3>
+          <div class="tag-list">
+            <span class="tag">English Literature</span>
+            <span class="tag">Language Training</span>
+            <span class="tag">Student Mentoring</span>
+            <span class="tag">Literary Activities</span>
+            <span class="tag">Academic Guidance</span>
+          </div>
+        </div>
+
+        <!-- Research Journey Timeline -->
+        <div class="modal-section" style="margin-top:3em;">
+          <div class="eyebrow">Research Journey</div>
+          <h3>A Academic Timeline</h3>
+          <div class="timeline">
+            <div class="t-item">
+              <h4>Interest in Literature</h4>
+              <p>The foundation — where the questions began, focusing on how narrative shapes societal norms and empathy.</p>
+            </div>
+            <div class="t-item">
+              <h4>Teaching Experience</h4>
+              <p>Facilitated courses at Chellammal College in English Literature, fostering a mentoring environment for active literary debates.</p>
+            </div>
+            <div class="t-item">
+              <h4>Conference Presentations</h4>
+              <p>Shared early theories on digital storytelling and interactive narratives within the broader academic community.</p>
+            </div>
+            <div class="t-item">
+              <h4>Journal Publications</h4>
+              <p>Formalized research findings into peer-reviewed publications focusing on Korean webtoons and chick literature.</p>
+            </div>
+            <div class="t-item">
+              <h4>Doctoral Research</h4>
+              <p>Embarking on a comprehensive study of Transmedia Storytelling and narrative ethics in Korean Webtoons at Vel Tech.</p>
+            </div>
+            <div class="t-item">
+              <h4>Creative Writing</h4>
+              <p>Launched poetry collections like "Whispers Between" and engaged in short fiction writing to explore storytelling dynamically.</p>
+            </div>
+            <div class="t-item">
+              <h4>Future Academic Vision</h4>
+              <p>Bridging traditional literary studies with digital humanities to establish new academic frameworks for web-based art forms.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Research Philosophy -->
+        <div class="modal-section" style="margin-top:3em;">
+          <div class="eyebrow">Research Philosophy</div>
+          <p class="philosophy-quote">
+            "Bridging traditional literary studies with modern digital storytelling — reading Webtoons not as ephemera, but as literary texts carrying the ethics and aesthetics of a new narrative age."
+          </p>
+        </div>
+
+        <!-- Research Domains -->
+        <div class="modal-section" style="margin-top:3em;">
+          <div class="eyebrow">Research Domains</div>
+          <div class="tag-list">
+            <span class="tag">Contemporary Korean Literature</span>
+            <span class="tag">Digital Literature</span>
+            <span class="tag">Narrative Ethics</span>
+            <span class="tag">Digital Humanities</span>
+            <span class="tag">Hallyu Studies</span>
+            <span class="tag">Webtoons</span>
+            <span class="tag">Transmedia Storytelling</span>
+          </div>
+        </div>
+
+        <!-- Patents -->
+        <div class="modal-section" style="margin-top:3em;">
+          <div class="eyebrow">Patents</div>
+          <div class="card-grid">
+            <div class="mini-card" style="cursor: pointer;" onclick="document.getElementById('lb-inner').innerHTML='<img src=\'assets/patent_cert.jpg\' style=\'max-width:90%; max-height:80vh; object-fit:contain; border: 2px solid rgba(255,255,255,0.1);\' alt=\'Patent Certificate\'>'; document.getElementById('lightbox').classList.add('open');">
+              <img src="assets/patent_cert.jpg" alt="Webtoon Relaxation Theory Patent Certificate" style="width: 100%; height: 130px; object-fit: cover; margin-bottom: 1em; border: 1px solid var(--line);">
+              <h4>Webtoon Relaxation Theory</h4>
+              <p>Title: Webtoon Relaxation Theory. e-Stamp Patent Agent Form-26 Authorisation Certificate filed in connection with academic research scholar proceedings.</p>
+              <p style="color: var(--burgundy); font-weight: 600; font-size: 0.8rem; margin-top: 0.8em; text-transform: uppercase; letter-spacing: 0.05em;">Click to view e-Stamp Certificate &rarr;</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Awards -->
+        <div class="modal-section" style="margin-top:3em;">
+          <div class="eyebrow">Awards</div>
+          <div class="card-grid">
+            <div class="mini-card">
+              <div class="placeholder-icon"></div>
+              <h4>Academic Recognition</h4>
+              <p>Awards, scholarships, and honor certificates will be listed here.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificates -->
+        <div class="modal-section" style="margin-top:3em;">
+          <div class="eyebrow">Certificates</div>
+          <div class="card-grid">
+            <div class="mini-card">
+              <div class="placeholder-icon"></div>
+              <h4>Professional Courses</h4>
+              <p>Faculty development and advanced training certificates coming soon.</p>
+            </div>
+            <div class="mini-card">
+              <div class="placeholder-icon"></div>
+              <h4>Symposium Accreditations</h4>
+              <p>Seminar and workshop attendance credentials to be archived.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- RESEARCH SECTION -->
+  <section id="research" class="research-section">
+    <div class="container">
+      <div class="eyebrow reveal">Doctoral Work</div>
+      <h2 class="section-title reveal">Research</h2>
+      <p class="section-sub reveal">Advancing Literary Studies through Contemporary Digital Narratives</p>
+
+      <div class="research-title-box reveal">
+        <div class="label">Ph.D. Research Title</div>
+        <h3>
+          WEBTOONS AS DIGITAL LITERATURE: INTEGRATING HALLYU POP AESTHETICS WITH TRADITIONAL NARRATIVE ETHICS IN CONTEMPORARY KOREAN STORYTELLING
+        </h3>
+      </div>
+
+      <div class="chip-grid reveal">
+        <span class="chip">Contemporary Korean Literature</span>
+        <span class="chip">Digital Literature</span>
+        <span class="chip">Webtoons</span>
+        <span class="chip">Narrative Ethics</span>
+        <span class="chip">Hallyu Studies</span>
+        <span class="chip">Transmedia Storytelling</span>
+        <span class="chip">Digital Humanities</span>
+      </div>
+
+      <div class="two-col">
+        <div class="reveal">
+          <h4 style="margin-bottom:1.5em; font-family:var(--serif); color:var(--burgundy);">Research Objectives</h4>
+          <ul class="obj-list">
+            <li>
+              <span class="n">01</span> 
+              <div>To analyze the representation of betrayal, resilience, empowerment, and personal agency in the selected Korean webtoons.</div>
+            </li>
+            <li>
+              <span class="n">02</span>
+              <div>To examine how the selected webtoons integrate Hallyu pop aesthetics with traditional Confucian narrative ethics in contemporary Korean storytelling.</div>
+            </li>
+            <li>
+              <span class="n">03</span>
+              <div>To establish webtoons as an interdisciplinary form of digital literature by exploring their literary, visual, cultural, and technological dimensions.</div>
+            </li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h4 style="margin-bottom:1.5em; font-family:var(--serif); color:var(--burgundy);">Research Interests</h4>
+          <div class="chip-grid">
+            <span class="chip">Korean Literature</span>
+            <span class="chip">Digital Storytelling</span>
+            <span class="chip">Webtoons</span>
+            <span class="chip">Cultural Studies</span>
+            <span class="chip">Media Studies</span>
+            <span class="chip">Literary Theory</span>
+            <span class="chip">AI in Literature</span>
+            <span class="chip">Narrative Ethics</span>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="reveal" style="margin-top:4em; margin-bottom:1.5em; font-family:var(--serif); text-align:center;">Research Topics</h4>
+      <div class="research-cards" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto;">
+        <div class="r-card reveal">
+          <h4>Contemporary Korean Storytelling</h4>
+          <p>Tracing how modern Korean narratives carry inherited literary and philosophical values in an era of globalization.</p>
+        </div>
+        <div class="r-card reveal">
+          <h4>Narrative Ethics</h4>
+          <p>Investigating the moral weight of interactive story branches and what digital stories owe to their audiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- MY WORKS SECTION -->
+  <section id="works" class="works-section">
+    <div class="container">
+      <div class="eyebrow reveal">Publications</div>
+      <h2 class="section-title reveal">My Works</h2>
+
+      <div class="mag-grid">
+        <!-- Publication 1 -->
+        <div class="mag-card reveal">
+          <div class="idx">01</div>
+          <h4>From Victim to Victor: A Chick Literature Reading of the Female Protagonist in <em>Marry My Husband</em></h4>
+          <div class="mag-meta">
+            <span>English Axis</span>
+            <span class="dot">·</span>
+            <span>December 2025</span>
+          </div>
+          <p class="mag-summary">An academic analysis investigating the evolution of female agency, revenge-centered narratives, and modern empowerment structures within contemporary Korean chick lit.</p>
+        </div>
+        <!-- Publication 2 -->
+        <div class="mag-card reveal">
+          <div class="idx">02</div>
+          <h4>Digital Magic: Reimagining Fate through Artificial Intelligence and Fantasy in Korean Webtoon</h4>
+          <div class="mag-meta">
+            <span>Bodhi International Journal</span>
+            <span class="dot">·</span>
+            <span>December 2025</span>
+          </div>
+          <p class="mag-summary">A study evaluating the fusion of magical realism, reincarnation systems, and generative technology paradigms in digital scroll narratives.</p>
+        </div>
+        <!-- Book Chapter -->
+        <div class="mag-card reveal">
+          <div class="idx">BC</div>
+          <h4>Webtoon as Contemporary Literature: Adaptation and Cultural Revival in <em>Marry My Husband</em></h4>
+          <div class="mag-meta">
+            <span>Book Chapter</span>
+            <span class="dot">·</span>
+            <a href="https://mindreadingpublications.com/books/Beyond-the-Ages-9789392150913.pdf" target="_blank" style="color: var(--burgundy); font-weight: bold;">DOI Link &rarr;</a>
+          </div>
+          <p class="mag-summary">Investigates how webtoons act as catalysts for cultural revival and literature adaptations, taking the serialization of Marry My Husband as a primary text.</p>
+        </div>
+        <!-- Patent -->
+        <div class="mag-card reveal" style="cursor: pointer;" onclick="document.getElementById('lb-inner').innerHTML='<img src=\'assets/patent_cert.jpg\' style=\'max-width:90%; max-height:80vh; object-fit:contain; border: 2px solid rgba(255,255,255,0.1);\' alt=\'Patent Certificate\'>'; document.getElementById('lightbox').classList.add('open');">
+          <div class="idx">PT</div>
+          <h4>Webtoon Relaxation Theory</h4>
+          <div class="mag-meta">
+            <span>Patent Filing</span>
+            <span class="dot">·</span>
+            <span style="color: var(--burgundy); font-weight: bold;">View e-Stamp &rarr;</span>
+          </div>
+          <p class="mag-summary">A patent study on digital media consumption relaxation theory mapping cognitive breaks during vertical scrolling cycles.</p>
+          <img src="assets/patent_cert.jpg" alt="Patent Certificate" style="width: 100%; height: 80px; object-fit: cover; margin-top: 1em; border: 1px solid var(--line); border-radius: 2px;">
+        </div>
+        <!-- Conference Paper -->
+        <div class="mag-card reveal">
+          <div class="idx">CF</div>
+          <h4>AI Perfection and the Mask of Beauty: Psychological Effects of Digital Perfectionism in <em>True Beauty</em></h4>
+          <div class="mag-meta">
+            <span>Conference Paper</span>
+            <span class="dot">·</span>
+            <span>Presentation</span>
+          </div>
+          <p class="mag-summary">Examines aesthetic hyper-perfectionism in character renders, virtual filters, and psychological effects on reader perception in the webtoon True Beauty.</p>
+      </div>
+
+      <!-- Stats Strip -->
+      <div class="stat-strip reveal">
+        <div>
+          <div class="num" data-count="6">0</div>
+          <div class="label">Publications</div>
+        </div>
+        <div>
+          <div class="num" data-count="2">0</div>
+          <div class="label">Conferences</div>
+        </div>
+        <div>
+          <div class="num" data-count="2">0</div>
+          <div class="label">Book Chapters</div>
+        </div>
+        <div>
+          <div class="num" data-count="1">0</div>
+          <div class="label">Patents</div>
+        </div>
+        <div>
+          <div class="num" data-count="1">0</div>
+          <div class="label">Poetry Book</div>
+        </div>
+        <div>
+          <div class="num" data-count="1">0</div>
+          <div class="label">Short Story</div>
+        </div>
+        <div>
+          <div class="num" data-count="1">0</div>
+          <div class="label">Novel</div>
+        </div>
+        <div>
+          <div class="num" data-count="1">0</div>
+          <div class="label">PR Review</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- POETRIES & STORIES SECTION -->
+  <section id="poetry" class="poetry-section">
+    <div class="container">
+      <div class="eyebrow reveal">Creative Writing</div>
+      <h2 class="section-title reveal">Poetries &amp; Stories</h2>
+
+      <div class="book-feature" style="margin-top:4em;">
+        <div class="book-cover-container reveal">
+          <!-- Premium Generated Cover Image -->
+          <img src="assets/whispers_between.png" alt="Whispers Between Cover Art" class="book-cover-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="book-cover-fallback" style="display:none;">Whispers Between</div>
+        </div>
+        <div class="book-desc reveal">
+          <div class="eyebrow" style="margin-bottom:0.6em;">Collection of Poems</div>
+          <h3 style="margin-bottom:0.6em; font-size:2.2rem; font-family:var(--serif); color:var(--burgundy);">Whispers Between</h3>
+          <p>
+            Whispers Between is a collection born from the quiet spaces between heartbeats, memories, tears, silence, hope, and dreams. Every poem reflects emotional journeys of resilience, love, longing, healing, and self-discovery, inviting readers into moments that connect deeply with the human spirit.
+          </p>
+          <div class="hero-btns" style="margin-top:2em; justify-content: flex-start;">
+            <a href="https://www.amazon.in/dp/B0HCW5PG59" target="_blank" class="btn btn-gold" id="kindle-link">View on Amazon Kindle</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-block">
+        <div class="reveal">
+          <div class="eyebrow" style="margin-bottom:0.6em;">Short Story</div>
+          <h3 style="margin-bottom:0.6em; font-family:var(--serif); color:var(--burgundy);">On the Way to Go</h3>
+          <p style="max-width:48ch; opacity:0.85; margin-bottom: 2em;">
+            A reflective story exploring critical choices, uncertainty, courage, resilience, and personal transformation through the journey of a protagonist discovering their internal alignment.
+          </p>
+          <a href="#contact" class="btn btn-primary">Read Story Preview</a>
+        </div>
+        <div class="reveal book-cover-container">
+          <div class="story-cover">
+            <span>On the Way<br>to Go</span>
+            <small>Brundavanam P.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CONFERENCES SECTION -->
+  <section id="conferences" class="conferences-section">
+    <div class="container">
+      <div class="eyebrow reveal">Academic Engagement</div>
+      <h2 class="section-title reveal">Conferences</h2>
+      
+      <div class="chip-grid reveal" style="margin-top:2em; justify-content:center; max-width:900px; margin-left:auto; margin-right:auto;">
+        <span class="chip active">Conference Papers</span>
+        <span class="chip">Conference Presentations</span>
+        <span class="chip">Seminars</span>
+        <span class="chip">Academic Talks</span>
+        <span class="chip">Workshops</span>
+        <span class="chip">Conference Certificates</span>
+        <span class="chip">Photo Gallery</span>
+      </div>
+
+      <!-- Explicit Conference Papers Grid -->
+      <div class="mag-grid" style="margin-top: 3em; margin-bottom: 4em;">
+        <div class="mag-card reveal">
+          <div class="idx">CP 1</div>
+          <h4 style="color: var(--burgundy);">AI Perfection and the Mask of Beauty: Psychological Effects of Digital Perfectionism in <em>True Beauty</em></h4>
+          <div class="mag-meta">
+            <span>Conference Presentation</span>
+            <span class="dot">·</span>
+            <span>24 Jan 2026</span>
+          </div>
+          <p class="mag-summary">Investigates virtual facial customization, cosmetic validation dynamics, and perfectionism in webtoon rendering mechanics.</p>
+        </div>
+        <div class="mag-card reveal">
+          <div class="idx">CP 2</div>
+          <h4>From Victim to Victor: A Chick Literature Reading of the Female Protagonist in <em>Marry My Husband</em></h4>
+          <div class="mag-meta">
+            <span>Conference Presentation</span>
+            <span class="dot">·</span>
+            <span>December 2025</span>
+          </div>
+          <p class="mag-summary">Presented analysis of modern agency systems and female character growth trajectories in contemporary Korean narrative media.</p>
+        </div>
+      </div>
+
+      <!-- Chronological timeline layout of events -->
+      <h3 class="reveal" style="margin-top: 3em; font-family: var(--serif); text-align: center; color: var(--burgundy); font-size: 1.8rem;">Past Events</h3>
+      <div id="events" style="margin-top: 2em;">
+        <div class="ev-item reveal">
+          <div class="ev-date">24 Jan 2026</div>
+          <div>
+            <div class="ev-tag">Conference Paper</div>
+            <h4>AI Perfection and the Mask of Beauty: Psychological Effects of Digital Perfectionism in <em>True Beauty</em></h4>
+            <p class="ev-desc">An academic presentation investigating virtual aesthetics, webtoon visual culture, and psychological trends surrounding artificial beauty standards in digital scroll models.</p>
+          </div>
+        </div>
+        <div class="ev-item reveal">
+          <div class="ev-date">06 March 2026</div>
+          <div>
+            <div class="ev-tag">Session 1</div>
+            <h4>Technology without Humanity is a Bane</h4>
+            <p class="ev-desc">An exploratory paper examining the dehumanizing impact of autonomous systems on contemporary literary aesthetics and cultural consumption patterns.</p>
+          </div>
+        </div>
+        <div class="ev-item reveal">
+          <div class="ev-date">13 March 2026</div>
+          <div>
+            <div class="ev-tag">Session 2</div>
+            <h4>Virtual Museum Visit</h4>
+            <p class="ev-desc">Presented a methodology on utilizing virtual galleries and three-dimensional immersive simulations for remote arts education and digital museum archives.</p>
+          </div>
+        </div>
+        <div class="ev-item reveal">
+          <div class="ev-date">08 May 2026</div>
+          <div>
+            <div class="ev-tag">Successfully Organized</div>
+            <h4>Harry Potter Theme Literary Festival</h4>
+            <p class="ev-desc">Chaired the steering committee for a student literature exhibition analyzing post-modern wizarding lore, narrative arcs, and worldbuilding in modern fiction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- BOOKS SECTION -->
+  <section id="books" class="books-section">
+    <div class="container">
+      <div class="eyebrow reveal">Bibliography</div>
+      <h2 class="section-title reveal">Books</h2>
+      <div class="mag-grid">
+        <div class="mag-card reveal">
+          <div class="idx">Book 1</div>
+          <h4 style="color:var(--burgundy);">Whispers Between</h4>
+          <p style="opacity:0.75; font-size:0.92rem; margin-bottom:1.5em;">Poetry Collection — available now. A compilation of quiet reflections exploring human emotions and silent resolutions.</p>
+          <a href="https://www.amazon.in/dp/B0HCW5PG59" target="_blank" class="btn btn-gold" style="padding: 0.5em 1em; font-size: 0.7rem;">Kindle Store</a>
+        </div>
+        <div class="mag-card reveal coming-soon">
+          <div class="idx">Book 2</div>
+          <h4 style="color:var(--gold);">Short Story</h4>
+          <p style="opacity:0.75; font-size:0.92rem; margin-bottom:1.5em;">Coming Soon.</p>
+          <span class="badge">In Progress</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- GALLERY HALL SECTION -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="eyebrow reveal">Visual Archive</div>
+      <h2 class="section-title reveal">Gallery Hall</h2>
+
+      <!-- Pinterest masonry container -->
+      <div class="masonry" id="masonry">
+        <!-- Rendered dynamically via JS for clean lazy-loaded assets -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Overlay -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+    <div class="lb-close" id="lb-close" aria-label="Close image popup">&times;</div>
+    <div class="lb-inner" id="lb-inner"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ARTICLES & BLOGS SECTION -->
+  <section id="blogs" class="blogs-section">
+    <div class="container">
+      <div class="eyebrow reveal">Writing</div>
+      <h2 class="section-title reveal">Articles &amp; Blogs</h2>
+      
+      <div class="blog-tabs reveal">
+        <button class="blog-tab active" data-tab="journal">Journal Articles</button>
+        <button class="blog-tab" data-tab="blog">Blogs</button>
+      </div>
+
+      <div class="blog-panel active" data-panel="journal">
+        <div class="blog-card reveal">
+          <div class="cat">Academic Publications</div>
+          <h4>Literary Criticism Notes</h4>
+          <p style="opacity:0.75; font-size:0.9rem; margin-bottom:1.5em;">Reading webtoons through a literary-critical lens, analyzing layout dynamics and character interiority.</p>
+          <a href="#contact" class="read-more-link">Request Full Text &rarr;</a>
+        </div>
+        <div class="blog-card reveal">
+          <div class="cat">Research Papers</div>
+          <h4>On Narrative Ethics</h4>
+          <p style="opacity:0.75; font-size:0.9rem; margin-bottom:1.5em;">A working framework for digital narrative accountability in transmedia environments.</p>
+          <a href="#contact" class="read-more-link">Request Full Text &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-panel" data-panel="blog">
+        <div class="blog-card">
+          <div class="cat">Writing Tips</div>
+          <h4>Finding Your Research Voice</h4>
+          <p style="opacity:0.75; font-size:0.9rem; margin-bottom:1.5em;">Notes from the doctoral desk on structuring research schedules and building consistent thesis logs.</p>
+          <a href="#contact" class="read-more-link">Read Post &rarr;</a>
+        </div>
+        <div class="blog-card">
+          <div class="cat">Digital Storytelling</div>
+          <h4>Why Webtoons Matter</h4>
+          <p style="opacity:0.75; font-size:0.9rem; margin-bottom:1.5em;">A case for taking the scroll seriously as an evolutionary leap in modern literature.</p>
+          <a href="#contact" class="read-more-link">Read Post &rarr;</a>
+        </div>
+        <div class="blog-card">
+          <div class="cat">Book Reviews</div>
+          <h4>Reading Recommendations</h4>
+          <p style="opacity:0.75; font-size:0.9rem; margin-bottom:1.5em;">A weekly updated list of novels, essays, and theory books shaping my Ph.D. work.</p>
+          <a href="#contact" class="read-more-link">Read Post &rarr;</a>
+        </div>
+        <div class="blog-card">
+          <div class="cat">Personal Reflections</div>
+          <h4>Research Experiences</h4>
+          <p style="opacity:0.75; font-size:0.9rem; margin-bottom:1.5em;">Navigating self-doubt, discoveries, and the creative-critical balance during a doctoral program.</p>
+          <a href="#contact" class="read-more-link">Read Post &rarr;</a>
+        </div>
+      </div>
+      
+      <div style="margin-top:3em; text-align:center;" class="reveal">
+        <a href="#contact" class="btn btn-outline">Read More Writing</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-grid">
+      <div>
+        <div class="eyebrow reveal">Reach Out</div>
+        <h2 class="section-title reveal" style="font-size:clamp(2rem,3.6vw,3rem);">Get In Touch</h2>
+        
+        <div class="contact-info-list" style="margin-top:3em;">
+          <div class="contact-item reveal">
+            <div class="ic" aria-hidden="true">@</div>
+            <div>
+              <span class="c-label">Contact Email</span>
+              <a href="mailto:brindaofficial1410@gmail.com" class="c-val">brindaofficial1410@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item reveal">
+            <div class="ic" aria-hidden="true">&#9742;</div>
+            <div>
+              <span class="c-label">Contact Phone</span>
+              <a href="tel:+918148263733" class="c-val">+91 81482 63733</a>
+            </div>
+          </div>
+          <div class="contact-item reveal">
+            <div class="ic" aria-hidden="true">&#8962;</div>
+            <div>
+              <span class="c-label">Office Address</span>
+              <span class="c-val text-val">Vel Tech Rangarajan Dr. Sagunthala R&amp;D Institute, Chennai, India</span>
+            </div>
+          </div>
+          
+          <h4 class="reveal" style="margin-top: 3em; margin-bottom: 1em; font-family: var(--serif); font-size: 1.25rem;">Academic Profiles</h4>
+          <div class="academic-networks">
+            <a href="https://www.linkedin.com/in/brundavanam-p-88722b389/" target="_blank" class="network-badge reveal" title="LinkedIn Profile">
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://scholar.google.com/citations?user=WHv56DEAAAAJ&hl=en" target="_blank" class="network-badge reveal" title="Google Scholar citations">
+              <span>Google Scholar</span>
+            </a>
+            <a href="https://www.researchgate.net/profile/Brundavanam-p?ev=hdr_xprf" target="_blank" class="network-badge reveal" title="ResearchGate network profile">
+              <span>ResearchGate</span>
+            </a>
+            <a href="https://orcid.org/0009-0006-0148-3536" target="_blank" class="network-badge reveal" title="ORCID digital identifier">
+              <span>ORCID iD</span>
+            </a>
+            <a href="https://independent.academia.edu/BrundavanamBose" target="_blank" class="network-badge reveal" title="Academia.edu profile">
+              <span>Academia.edu</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <div class="field">
+          <label for="form-name">Full Name</label>
+          <input type="text" id="form-name" required placeholder="Your name">
+          <span class="error-msg">Please enter your name.</span>
+        </div>
+        <div class="field">
+          <label for="form-email">Email Address</label>
+          <input type="email" id="form-email" required placeholder="your.email@domain.com">
+          <span class="error-msg">Please enter a valid email address.</span>
+        </div>
+        <div class="field">
+          <label for="form-subject">Subject</label>
+          <input type="text" id="form-subject" required placeholder="Academic collaboration, literature enquiry, etc.">
+          <span class="error-msg">Please enter a subject.</span>
+        </div>
+        <div class="field">
+          <label for="form-msg-text">Message</label>
+          <textarea rows="5" id="form-msg-text" required placeholder="Write your message here..."></textarea>
+          <span class="error-msg">Please write a message.</span>
+        </div>
+        <button class="btn btn-primary" type="submit" style="align-self:flex-start;">Submit Message</button>
+        <div class="form-msg" id="form-msg" role="status"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4 class="logo">Brundavanam <span>P.</span></h4>
+        <p style="font-style:italic; opacity: 0.8; margin-top: 1em; font-family: var(--garamond); font-size: 1.1rem; line-height: 1.5;">
+          "Exploring stories that heal, inspire and connect."
+        </p>
+        <p style="margin-top: 2em; font-size: 0.85rem; opacity: 0.6;">
+          Department of English<br>
+          Vel Tech Rangarajan Dr. Sagunthala R&amp;D Institute of Science and Technology
+        </p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#works">My Works</a>
+        <a href="#poetry">Creative Writing</a>
+        <a href="#conferences">Conferences</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#blogs">Articles &amp; Blogs</a>
+        <a href="#contact">Contact &amp; CV</a>
+      </div>
+      <div>
+        <h4>Let's Connect</h4>
+        <a href="https://www.linkedin.com/in/brundavanam-p-88722b389/" target="_blank">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=WHv56DEAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://www.researchgate.net/profile/Brundavanam-p?ev=hdr_xprf" target="_blank">ResearchGate</a>
+        <a href="https://orcid.org/0009-0006-0148-3536" target="_blank">ORCID iD</a>
+        <a href="https://independent.academia.edu/BrundavanamBose" target="_blank">Academia.edu</a>
+        <a href="mailto:brindaofficial1410@gmail.com">Email Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Brundavanam P. | Designed with 💜 for Research and Digital Storytelling. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Script File -->
+  <script src="script.js?v=3"></script>
+</body>
+</html>
